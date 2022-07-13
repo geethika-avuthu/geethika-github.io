@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <form method="POST" action="thank_you.html" onsubmit="return submitBtn()">
+        <div class="container">
+            <img src="http://pixel6.co/wp-content/themes/pixel6/img/logo.png" class="logo" />
+            <h1 class="mainHeadingText">LOAN APPLICATION</h1>
+
+            <ul>
+                <div class="form-group">
+                    <label for="userName">Full Name</label>
+                    <input type="text" class="form-control" id="userName" />
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" />
+
+                </div>
+                <div class="form-group">
+                    <label for="pannumber">PAN Number</label>
+                    <input type="text" class="form-control" id="pannumber" />
+                </div>
+                <div class="form-group">
+                    <label for="inputLoanAmount">Loan Amount</label>
+                    <input type="number" class="form-control" id="inputLoanAmount" />
+                </div>
+                <div class="form-group">
+                    <span id="firstNumber" class="number m-2"></span>
+                    <span class="operator m-1">+</span>
+                    <span id="secondNumber" class="number m-2"></span>
+                    <span class="operator m-1">=</span>
+                    <input id="userInput" class="user-input" type="text" />
+                    <div class="mt-4 mb-4">
+
+                        <input id="newCaptchaButton" class="btn btn-info" onclick="refreshCaptcha()" value="New Captcha" />
+                    </div>
+                    <p id="captchaResult" class="captcha-result"></p>
+                </div>
+
+                <input type="submit" class="btn btn-info" value="Submit" />
+            </ul>
+        </div>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
