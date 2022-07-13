@@ -12,10 +12,6 @@ function allLetter(userNameEl, mx) {
     var letters = /^[A-Za-z]+$/;
     var userNameEl_len = userNameEl.value.length;
     if (userNameEl_len == 0 || userNameEl_len < mx) {
-        alert(
-            'Username must have alphabets and spaces only / length should be minimum ' +
-            mx
-        );
         userNameEl.focus();
         return false;
     } else if (userNameEl.value.match(letters) || userNameEl.value.match(' ')) {
@@ -25,13 +21,11 @@ function allLetter(userNameEl, mx) {
 
 function ValidateEmail(email) {
     var mailformat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
-
     if (email.value.match(mailformat)) {
         return true;
     } else if (email.value === '') {
         alert('enter email');
     } else {
-        alert('You have entered an invalid email address!');
         email.focus();
         return false;
     }
@@ -40,13 +34,7 @@ function ValidateEmail(email) {
 function alphanumeric(panNumber, mx) {
     var letters = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
     var panNumber_len = panNumber.value.length;
-    if (
-        panNumber.value.match(' ') ||
-        panNumber_len == 0 ||
-        panNumber_len < mx ||
-        panNumber_len > mx
-    ) {
-        alert('PAN Number must have alphanumeric characters only');
+    if (panNumber.value.match(' ') || panNumber_len == 0 || panNumber_len < mx || panNumber_len > mx) {
         panNumber.focus();
         return false;
     } else if (panNumber.value.match(letters)) {
@@ -57,11 +45,7 @@ function alphanumeric(panNumber, mx) {
 function allnumeric(loanAmount, mx) {
     var numbers = /^[0-9]+$/;
     var loanAmount_len = loanAmount.value.length;
-    if (
-        loanAmount.value.match(' ') ||
-        loanAmount_len <= 0 ||
-        loanAmount_len > mx
-    ) {
+    if (loanAmount.value.match(' ') || loanAmount_len <= 0 || loanAmount_len > mx) {
         alert('Loan amount must have numeric and 9 digits only');
         loanAmount.focus();
         return false;
