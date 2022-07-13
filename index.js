@@ -20,7 +20,7 @@ function allLetter(userNameEl, mx) {
 }
 
 function ValidateEmail(email) {
-    var mailformat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+    var mailformat = /^[a-zA-Z0-9._-]+@[a-zA-Z_]+?\.[a-zA-Z_]{2,3}$/;
     if (email.value.match(mailformat)) {
         return true;
     } 
